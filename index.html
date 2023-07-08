@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    *{
+        font-family: 'Poppins',sans-serif;
+    }
+    body{
+        text-align: center;
+        color:rgb(28, 28, 138);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+    }
+</style>
+<body>
+    <div id="scoreboard">Score:<span id="score">0</span></div>
+
+    <!-- The below div will appear as soon as game gets over -->
+    <div id="score-results">
+        <img src="Images/score-icon.png" alt="Monkey">
+        <p id="result">Your Score is 30. The highest score is 60 by Vansh. Would you like to play again?</p>
+        <div id="regame-boolean-div">
+            <button id="yes-regame">Yes</button>
+            <button id="no-regame">No</button>
+        </div>
+    </div>
+
+    <!-- Below buttons are for switching themes -->
+    <div id="day-theme" class="theme"><i class="fa-regular fa-sun"></i></div>
+    <div id="night-theme" class="theme"><i class="fa-solid fa-moon"></i></div>
+    <!-- Main frame starts here -->
+
+    <h1>Ping-Pong Game</h1>
+    <div id="screen">  <!--Here its the screen which will display game-->
+
+        <div id="end1" class="end"> <!--This is the one end of screen which will have one bar-->
+            <div class="bar">
+            </div>
+        </div>
+
+        <p id="start-instruction">Press S to Start the Game</p> <!--This instruction will appear before commencement of game-->
+
+        <div id="ball"></div>
+
+        <div id="end2" class="end">  <!--Its the other end of screen with other bar-->
+            <div class="bar"></div>
+        </div>
+    </div>
+
+
+    <!-- These are the written instructions present below to guide player  -->
+    <p>Control the player by using A and D keys</p>
+    <script src="script.js"></script>
+</body>
+</html>
